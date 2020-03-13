@@ -8,13 +8,14 @@
       "location": "Ho Chi Minh",
       "type": "Product",
       "salary": 1000,
-      "skills": {
-        "java": 3,
-        "html": 1,
-        "css": 1,
-        "mysql": 2,
-        "mongodb": 0
-      },
+      "expiration": "2020-03-20 23:59:59 +07:00",
+      "skills": [
+        { "name": "java", "level": 3 },
+        { "name": "html", "level": 1 },
+        { "name": "css", "level": 1 },
+        { "name": "mysql", "level": 2 },
+        { "name": "mongodb", "level": 0 }
+      ],
       "slots": 70,
       "benifits": "salary review every year"
     },
@@ -26,12 +27,13 @@
       "location": "Hai Phong",
       "type": "Outsourcing",
       "salary": 700,
-      "skills": {
-        "html": 3,
-        "webgl": 2,
-        "json": 2,
-        "restful": 3
-      },
+      "expiration": "2020-03-08 23:59:59 +07:00",
+      "skills": [
+        { "name": "HTML", "level": 3 },
+        { "name": "WebGL", "level": 2 },
+        { "name": "JSON", "level": 2 },
+        { "name": "Restful API", "level": 3 }
+      ],
       "slots": 12,
       "benifits": "13rd salary"
     },
@@ -43,11 +45,12 @@
       "location": "Ha Noi",
       "type": "Product",
       "salary": 1500,
-      "skills": {
-        "cpp": 3,
-        "qt": 2,
-        "mfc": 0
-      },
+      "expiration": "2020-04-01 23:59:59 +07:00",
+      "skills": [
+        { "name": "C++", "level": 3 },
+        { "name": "Qt framework", "level": 2 },
+        { "name": "MFC", "level": 0 }
+      ],
       "slots": 12,
       "benifits": "get bonus by every 6 months"
     }
