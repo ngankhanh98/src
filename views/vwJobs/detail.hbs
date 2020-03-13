@@ -1,0 +1,21 @@
+<h1>{{job.id}} &hyphen; {{job.name}}</h1>
+
+<p><b>Description:</b> {{job.description}}</p>
+<p><b>Company:</b> {{job.description}}</p>
+<p><b>Location:</b> {{job.location}}</p>
+<p><b>Type:</b> {{job.type}}</p>
+<p><b>Salary:</b> {{job.salary}}</p>
+<p><b>Expiration:</b> {{job.expiration}}</p>
+
+{{#if empty }}
+<p>This job has no requirement.</p>
+{{else}}
+<ul>
+  {{#each skills }}
+  <li>{{name}} - {{level}}</li>
+  {{/each}}
+</ul>
+{{/if}}
+
+<p><b>Slots:</b> {{job.slots}}</p>
+<p><b>Benifits:</b> {{job.benifits}}</p>
