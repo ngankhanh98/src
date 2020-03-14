@@ -1,17 +1,55 @@
-<div class="input-group">
-    <select id="inputGroupSelect" class="selectpicker" data-live-search="true">
-    <option selected>Chọn...</option>
-    {{#each kynang}}
-    <option data-tokens={{this.ten}} value="{{this.id}}">{{this.ten}}</option>
-    {{/each}}
-  </select>
-  <div class="input-group-append">
-    <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Mức độ</button>
-    <div class="dropdown-menu">
-      <a class="dropdown-item" href="#">Thấp</a>
-      <a class="dropdown-item" href="#">Trung bình</a>
-      <a class="dropdown-item" href="#">Cao</a>
+<style>
+  #selectedSkills>button {
+    margin: 2px;
+  }
+</style>
+
+<form>
+  <div class="form-group">
+    <div class="input-group">
+      <select id="inputGroupSelect" class="selectpicker" data-live-search="true">
+        <option>Kỹ năng...</option>
+        {{#each kynang}}
+        <option data-tokens="{{this.ten}}" value="{{this.id}}">{{this.ten}}</option>
+        {{/each}}
+      </select>
+      <div class="input-group-append">
+        <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">Mức độ</button>
+        <div class="dropdown-menu">
+          <button class="dropdown-item" onclick=addSkill(0)>Thấp</a>
+            <button class="dropdown-item" onclick=addSkill(1)>Trung bình</a>
+              <button class="dropdown-item" onclick=addSkill(2)>Cao</a>
+        </div>
+      </div>
     </div>
   </div>
-</div>
+  <div id="selectedSkills"></div>
+  <button type="submit" class="btn btn-primary">Tìm việc</button>
+</form>
 
+<script>
+  function addSkill(level) {
+    var para = document.createElement("button");
+    var text = document.querySelectorAll('[data-id=inputGroupSelect]');
+    console.log(text[0].title);
+    if (text[0].title != "Kỹ năng..."||"") {
+      var val = text[0].title;
+      para.innerHTML = val + "  " + "<i class='fas fa-times'></i>";
+      para.type = "button";
+
+      if (level == 0)
+        para.className = "btn btn-secondary btn-sm"
+      else if (level == 1)
+        para.className = "btn btn-info btn-sm"
+      else
+        para.className = "btn btn-primary btn-sm"
+      document.getElementById("selectedSkills").appendChild(para);
+
+      // xóa skill vừa được chọn ra khỏi danh sách
+      var del = document.querySelector(`[data-tokens="${val}"]`);
+      del.parentNode.removeChild(del);
+      $(".selectpicker").selectpicker("refresh");
+    }
+  }
+</script>
