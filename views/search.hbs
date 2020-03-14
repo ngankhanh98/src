@@ -1,0 +1,17 @@
+<div class="input-group">
+    <select id="inputGroupSelect" class="selectpicker" data-live-search="true">
+    <option selected>Chọn...</option>
+    {{#each kynang}}
+    <option data-tokens={{this.ten}} value="{{this.id}}">{{this.ten}}</option>
+    {{/each}}
+  </select>
+  <div class="input-group-append">
+    <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Mức độ</button>
+    <div class="dropdown-menu">
+      <a class="dropdown-item" href="#">Thấp</a>
+      <a class="dropdown-item" href="#">Trung bình</a>
+      <a class="dropdown-item" href="#">Cao</a>
+    </div>
+  </div>
+</div>
+

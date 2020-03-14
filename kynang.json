@@ -1,0 +1,30 @@
+{
+    "kynang":[
+        { "id":1, "ten": "Cloud Security", "mucdo": 1 },
+        { "id":2, "ten": "Infrastructure as code (IaC)", "mucdo": 1 },
+        { "id":3, "ten": "Firewalls", "mucdo": 1 },
+        { "id":4, "ten": "Real-time Monitoring", "mucdo": 1 },
+        { "id":5, "ten": "Malware Analysis", "mucdo": 1 },
+        { "id":6, "ten": "Artificial Intelligence (AI)", "mucdo": 1 },
+        { "id":7, "ten": "Python (Programming Language)", "mucdo": 1 },
+        { "id":8, "ten": "Google Cloud Platform (GCP)", "mucdo": 1 },
+        { "id":9, "ten": "Machine Learning", "mucdo": 1 },
+        { "id":10, "ten": "SAS", "mucdo": 1 },
+        { "id":11, "ten": "Software Development", "mucdo": 1 },
+        { "id":12, "ten": "C++", "mucdo": 1 },
+        { "id":13, "ten": "Automotive Industry", "mucdo": 1 },
+        { "id":14, "ten": "Computer Graphics", "mucdo": 1 },
+        { "id":15, "ten": "Test Scripts", "mucdo": 1 },
+        { "id":16, "ten": "JMeter", "mucdo": 1 },
+        { "id":17, "ten": "Test Automation", "mucdo": 1 },
+        { "id":18, "ten": "Selenium", "mucdo": 1 }
+    ],
+    "persons": [
+        { "name": "Nils", "age": 20 },
+        { "name": "Teddy", "age": 10 },
+        { "name": "Nelson", "age": 40 }
+      ]
+}
+
+
+
