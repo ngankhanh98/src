@@ -10,14 +10,14 @@
       "salary": 1000,
       "expiration": "2020-03-20 23:59:59 +07:00",
       "skills": [
-        { "name": "java", "level": 3 },
-        { "name": "html", "level": 1 },
-        { "name": "css", "level": 1 },
-        { "name": "mysql", "level": 2 },
-        { "name": "mongodb", "level": 0 }
+        { "name": "Java", "level": 3 },
+        { "name": "HTML", "level": 1 },
+        { "name": "CSS", "level": 1 },
+        { "name": "MySQL", "level": 2 },
+        { "name": "MongoDB", "level": 0 }
       ],
       "slots": 70,
-      "benifits": "salary review every year"
+      "benifits": "Salary review every year"
     },
     {
       "id": 2,
@@ -35,7 +35,7 @@
         { "name": "Restful API", "level": 3 }
       ],
       "slots": 12,
-      "benifits": "13rd salary"
+      "benifits": "The 13rd salary is available"
     },
     {
       "id": 3,
@@ -52,7 +52,7 @@
         { "name": "MFC", "level": 0 }
       ],
       "slots": 12,
-      "benifits": "get bonus by every 6 months"
+      "benifits": "Get bonus by every 6 months"
     }
   ]
 }
