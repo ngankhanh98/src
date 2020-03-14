@@ -10,6 +10,17 @@ const adapter = new FileSync('db/jobs.json');
 const db = low(adapter);
 
 
+/* GET list of jobs. */
+router.get('/', function (req, res, next) {
+  const jobs = db.get('jobs')
+    .value();
+
+  res.render('vwJobs/index', {
+    jobs,
+    empty: jobs.length == 0
+  });
+});
+
 /* GET job detail. */
 router.get('/:id', function (req, res, next) {
   const job = db.get('jobs')
@@ -18,7 +29,6 @@ router.get('/:id', function (req, res, next) {
 
   res.render('vwJobs/detail', {
     job,
-
     empty: job === undefined
   });
 });
