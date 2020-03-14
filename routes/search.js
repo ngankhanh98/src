@@ -1,16 +1,7 @@
-var express = require('express');
-var router = express.Router();
-const fs = require('fs');
+const express = require('express');
+const router = express.Router();
+const search = require('../controllers/search');
 
-/* GET home page. */
-router.get('/', function(req, res, next) {
-  fs.readFile('kynang.json', (err, data) => {
-    if (err) throw err;
-    let dt = JSON.parse(data);
-    dt = dt.kynang;
-    res.render('search', { title: 'Search', kynang: dt });
-    console.log(dt)
-});
-});
+router.get('/', search.home);
 
 module.exports = router;
