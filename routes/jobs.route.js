@@ -19,8 +19,7 @@ router.get('/:id', function (req, res, next) {
   res.render('vwJobs/detail', {
     job,
 
-    skills: job.skills,
-    empty: job.skills.length === 0
+    empty: job === undefined
   });
 });
 
