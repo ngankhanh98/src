@@ -33,6 +33,6 @@ exports.filter = async (req, res, next) => {
 
 
   congviec = await search.filterCongViec(arr);
-  // console.log(congviec);
-  res.render("index", { title: arr });
+  console.log(congviec);
+  res.render("error");
 };

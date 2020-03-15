@@ -18,8 +18,9 @@ module.exports.filterCongViec = async filter => {
   var result = data.filter(data => {
     console.log(data.kyNangCan);
     console.log(filter);
-    if (data.kyNangCan == filter) {
+    if (_.isEqual(data.kyNangCan, filter)) {
       console.log(true);
+      console.log(data);
       return data;
     }
   });
