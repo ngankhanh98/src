@@ -8,31 +8,58 @@ exports.home = async (req, res) => {
   });
 };
 
-exports.filter = async (req, res, next) => {
-  var obj = req.body["KyNang"];
-  obj = obj.split(" / ");
- 
-  var arr = [];
-  var e = new Object();
-  
-  for (let index = 0; index < obj.length; index++) {
-    const element = obj[index];
-    if(index%2==0)
-    {
-      e.ten = element;
+exports.result = async (req, res) => {
+  let result = [];
+
+  // Tạo mảng gồm các skill được gửi xuống từ view
+  let obj = req.body.KyNang;
+  obj = obj.split(',');
+  let skills = [];
+  obj.map(i => {
+    if (i !== ' ') {
+      const newStr = i.trim();
+      skills.push(newStr);
     }
-    else 
-    {
-      if(element.includes("Nghiệp dư")) e.trinhdo = 1;
-      else if(element.includes("Có kinh nghiệm")) e.trinhdo=2;
-      else e.trinhdo=3;
-    
-      arr.push(e);
-    }   
+  });
+  // =============================================
+
+  // Ứng với mỗi congviec tạo ra 1 mảng các kỹ năng cần thiết đối (cấu trúc giống với mảng skills)
+  let congviec = await search.getCongViec();
+  for (let i = 0; i < congviec.length; i++) {
+    let arrKyNangCan = [];
+    congviec[i].kyNangCan.map(j => {
+      arrKyNangCan.push(j.ten + ' / ' + j.trinhdo);
+    });
+    congviec[i].arrKyNangCan = arrKyNangCan;
   }
+  // =============================================
 
+  // So sánh 2 mảng đó, nếu giống nhau thì push vào result
+  for (let i = 0; i < congviec.length; i++) {
+    let count = 0;
+    skills.map(j => {
+      if (congviec[i].arrKyNangCan.includes(j)) {
+        count++;
+      }
+    });
+    if (count === skills.length) {
+      let count1 = 0;
+      congviec[i].arrKyNangCan.map(j => {
+        if (skills.includes(j)) {
+          count1++;
+        }
+      });
+      if (count1 == congviec[i].arrKyNangCan.length) {
+        result.push(congviec[i]);
+      }
+    }
+  }
+  // ============================================
 
-  congviec = await search.filterCongViec(arr);
-  console.log(congviec);
-  res.render("error");
+  kynang = await search.getKyNang();
+  res.render("search", {
+    title: "Search",
+    search: result,
+    kynang
+  });
 };

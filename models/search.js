@@ -9,19 +9,3 @@ module.exports.getCongViec = async () => {
   const data = await db.get("congviec").value();
   return data;
 };
-
-module.exports.filterCongViec = async filter => {
-  const data = await db.get("congviec").value();
-  // console.log(data[0].kyNangCan[0].ten);
-
-  // console.log(filter);
-  var result = data.filter(data => {
-    console.log(data.kyNangCan);
-    console.log(filter);
-    if (_.isEqual(data.kyNangCan, filter)) {
-      console.log(true);
-      console.log(data);
-      return data;
-    }
-  });
-};
