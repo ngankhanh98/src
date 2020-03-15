@@ -54,5 +54,24 @@
       "slots": 12,
       "benifits": "Get bonus by every 6 months"
     }
+  ],
+  "users": [
+    { "id": 1, "username": "Nguyễn Văn B", "type": 2 },
+    { "id": 2, "username": "Nguyễn Thị C", "type": 1 },
+    { "id": 3, "username": "Lê Hồng D", "type": 2 }
+  ],
+  "companies": [
+    {
+      "id": 1,
+      "name": "Tosiba",
+      "phone": "09873232",
+      "id_manager": "1"
+    },
+    {
+      "id": 2,
+      "name": "DIGITOP",
+      "phone": "09873232",
+      "id_manager": "3"
+    }
   ]
 }

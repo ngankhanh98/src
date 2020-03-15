@@ -1,6 +1,7 @@
-const db = require('../utils/db');
+const db = require("../utils/db");
 
 module.exports = {
-  all: () => db.all('jobs'),
-  get: condition => db.get('jobs', condition)
+  all: () => db.all("jobs"),
+  get: condition => db.get("jobs", condition),
+  add: value => db.add("jobs", value)
 };

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>{{title}}</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" />
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+    {{#if extra}}
+    {{{extra}}}
+    {{/if}}
+
+</head>
+
+<body>
+    {{#if script}}
+    {{{script}}}
+    {{/if}}
+    <nav class="navbar navbar-expand-md navbar-light bg-light mb-4 shadow-sm">
+        <div class="container d-flex justify-content-between">
+            <a class="navbar-brand" href="#">TUYENDUNG</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+                aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Tin tuyển dụng <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/search">Tìm kiếm nâng cao</a>
+                    </li>
+
+                </ul>
+                <form class="form-inline mt-2 mt-md-0 ">
+                    <div class="input-group flex-nowrap">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="addon-wrapping"><i class="fas fa-search"></i></span>
+                        </div>
+                        <input type="text" class="form-control" placeholder="Tìm kiếm theo kỹ năng, công ty..."
+                            aria-label="search">
+                    </div>
+                </form>
+                <button class="btn btn-link my-2 my-sm-0" type="button"><i class="fas fa-user"></i></button>
+            </div>
+        </div>
+    </nav>
+
+
+
+    {{{body}}}
+
+</body>
+
+</html>

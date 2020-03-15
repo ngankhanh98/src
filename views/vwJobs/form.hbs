@@ -1,0 +1,109 @@
+<div class="container">
+    <div class="row">
+        <div class="col-2">
+        </div>
+        <div class="col-8 border border-secondary">
+            <form id="Form">
+                <div class="form-group mt-3">
+                    <input type="text" class="form-control" id="viTri" placeholder="Lập trình viên" name="name">
+                </div>
+                <div class="form-group row">
+                    <div class="col">
+                        <label for="number">Chỉ tiêu</label>
+                        <input type="number" class="form-control" placeholder="0" id="number" name="number">
+                    </div>
+                    <div class="col">
+                        <label for="salary">Lương</label>
+                        <input type="number" class="form-control" placeholder="0" id="number" name="salary">
+                    </div>
+                    <div class="col">
+                        <label for="datepicker">Ngày hết hạn</label>
+                        <input type="text" id="datepicker" class="form-control">
+                    </div>
+                </div>
+                <div>
+                    <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal">
+                        Thêm kỹ năng
+                    </button>
+                </div>
+                <div class="form-group">
+                    <label for="exampleFormControlTextarea1">Nội dung</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
+                        name="description"></textarea>
+                </div>
+            </form>
+        </div>
+        <div class="col-2"></div>
+    </div>
+</div>
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                ...
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"></script>
+<script>
+    $(function () {
+        $("#datepicker").datepicker();
+        $('#AddDue').datetimepicker();
+        $('#Form').validate({
+            rules: {
+                name: {
+                    required: true,
+                    maxlength: 200
+                },
+                description: {
+                    required: true,
+                },
+                price: {
+                    required: true,
+                    number: true
+                },
+                salary: {
+                    required: true,
+                    number: true
+                },
+            },
+            messages: {
+                name: {
+                    required: 'Your username is required.',
+                    maxlength: 'Maximum lenght is 200 charaters.',
+                },
+                description: {
+                    required: 'Your description is required.',
+                },
+                number: {
+                    required: 'Your price is required.',
+                    number: "Input must be a number"
+                },
+                salary: {
+                    required: 'Your quanlity is required.',
+                    number: "Input must be a number"
+                },
+            },
+            errorElement: 'small',
+            errorClass: 'form-text text-danger',
+            highlight: function (e) {
+                $(e).removeClass('is-valid').addClass('is-invalid');
+            },
+            unhighlight: function (e) {
+                $(e).removeClass('is-invalid').addClass('is-valid');
+            }
+        });
+    })
+</script>
