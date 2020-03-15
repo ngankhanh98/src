@@ -3,7 +3,7 @@
     margin: 3px;
   }
 
-  #selectedSkills>button{
+  #selectedSkills>button {
     border-radius: 50px;
   }
 </style>
@@ -14,9 +14,9 @@
       Tìm kiếm nâng cao
     </div>
     <div class="card-body">
-      <form>
+      <form method="POST" action="search/result">
         <ul class="list-group list-group-flush">
-          <li class="list-group-item" >
+          <li class="list-group-item">
             <div class="form-group">
               <div class="input-group d-flex justify-content-center">
                 <select id="inputGroupSelect" class="selectpicker" data-live-search="true">
@@ -36,32 +36,37 @@
                 </div>
               </div>
             </div>
-            <div id="selectedSkills"></div>
-          </li>
-          <li class="list-group-item d-flex justify-content-center">
-            <button type="submit" class="btn btn-primary">Tìm kiếm tin tuyển dụng</button>
-          </li>
-        </ul>
-      </form>
+            <textarea type="button" class="form-control" id="selectedSkills" name="KyNang"></textarea>
+            {{!-- <div class="form-group" id="selectedSkills" name="KyNang"></div> --}}
     </div>
+
+    </li>
+    <li class="list-group-item d-flex justify-content-center">
+      <button type="submit" class="btn btn-primary">Tìm kiếm tin tuyển dụng</button>
+    </li>
+    </ul>
+    </form>
   </div>
 </div>
-
+</div>
 
 <script>
   function addSkill(level) {
     var para = document.createElement("button");
     var text = document.querySelectorAll('[data-id=inputGroupSelect]');
-    console.log(text[0].title);
+
     if (text[0].title != "Tên kỹ năng" || "") {
       var val = text[0].title;
 
       // chuẩn bị xóa khỏi danh sách skill
       var del = document.querySelector(`[data-tokens="${val}"]`);
 
-      para.type = "button";
-      para.className = "btn btn-primary btn-sm";
+      // thêm text skill
+      // document.getElementById("selectedSkills").innerHTML += val;
 
+      // thêm button skill
+      // para.type = "input";
+      // para.className = "btn btn-primary btn-sm";
       if (level == 0)
         val = val + " / Nghiệp dư ";
       else if (level == 1)
@@ -69,11 +74,11 @@
       else
         val = val + " / Chuyên nghiệp ";
 
-      para.innerHTML = val + "  " + "<i class='fas fa-times'></i>";
-      document.getElementById("selectedSkills").appendChild(para);
+      document.getElementById("selectedSkills").innerHTML += val;
+      // para.innerHTML = val + "  " + "<i class='fas fa-times'></i>";
+      // document.getElementById("selectedSkills").appendChild(para);
 
       // xóa skill vừa được chọn ra khỏi danh sách
-
       del.parentNode.removeChild(del);
       $(".selectpicker").selectpicker("refresh");
     }
