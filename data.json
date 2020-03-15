@@ -1,0 +1,96 @@
+{
+  "kynang": [
+    {
+      "id": 1,
+      "ten": "Cloud Security"
+    },
+    {
+      "id": 2,
+      "ten": "Infrastructure as code (IaC)"
+    },
+    {
+      "id": 3,
+      "ten": "Firewalls"
+    },
+    {
+      "id": 4,
+      "ten": "Real-time Monitoring"
+    },
+    {
+      "id": 5,
+      "ten": "Malware Analysis"
+    },
+    {
+      "id": 6,
+      "ten": "Artificial Intelligence (AI)"
+    },
+    {
+      "id": 7,
+      "ten": "Python (Programming Language)"
+    },
+    {
+      "id": 8,
+      "ten": "Google Cloud Platform (GCP)"
+    },
+    {
+      "id": 9,
+      "ten": "Machine Learning"
+    },
+    {
+      "id": 10,
+      "ten": "SAS"
+    },
+    {
+      "id": 11,
+      "ten": "Software Development"
+    },
+    {
+      "id": 12,
+      "ten": "C++"
+    },
+    {
+      "id": 13,
+      "ten": "Automotive Industry"
+    },
+    {
+      "id": 14,
+      "ten": "Computer Graphics"
+    },
+    {
+      "id": 15,
+      "ten": "Test Scripts"
+    },
+    {
+      "id": 16,
+      "ten": "JMeter"
+    },
+    {
+      "id": 17,
+      "ten": "Test Automation"
+    },
+    {
+      "id": 18,
+      "ten": "Selenium"
+    }
+  ],
+  "congviec": [
+    {
+      "id": 1,
+      "kyNangCan": [{ "ten": "Cloud Security", "trinhdo": 1 }],
+      "congTy": "VNG",
+      "ngayDang": "2020-03-15",
+      "ngayHetHan": "2020-05-15",
+      "luong": 6,
+      "noiDung": "VNG Group ra đời với mục tiêu tạo hệ sinh thái online, giúp người dùng có thể trải nghiệm mọi tiện ích từ tiêu dùng, tài chính, kinh doanh, giáo dục, việc làm, nhà đất,..."
+    },
+    {
+      "id": 2,
+      "kyNangCan": [{ "ten": "Cloud Security", "trinhdo": 2 }, { "ten": "Real-time Monitoring", "trinhdo": 1 }],
+      "congTy": "VNG",
+      "ngayDang": "2020-03-15",
+      "ngayHetHan": "2020-05-15",
+      "luong": 6,
+      "noiDung": "VNG Group ra đời với mục tiêu tạo hệ sinh thái online, giúp người dùng có thể trải nghiệm mọi tiện ích từ tiêu dùng, tài chính, kinh doanh, giáo dục, việc làm, nhà đất,..."
+    }
+  ]
+}
