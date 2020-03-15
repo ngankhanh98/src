@@ -1,5 +1,5 @@
 const { db } = require("../config/dbs");
-var _ = require("underscore");
+var _ = require("lodash");
 
 module.exports.getKyNang = async () => {
   const data = await db.get("kynang").value();
@@ -10,18 +10,25 @@ module.exports.getCongViec = async () => {
   return data;
 };
 
-module.exports.filterCongViec = async filter => {
+module.exports.filterCongViec = async (filter) => {
   const data = await db.get("congviec").value();
-  // console.log(data[0].kyNangCan[0].ten);
+  // let t = JSON.stringify(filter); 
+  // console.log(`filter: ${t}`);
 
-  // console.log(filter);
-  var result = data.filter(data => {
-    console.log(data.kyNangCan);
-    console.log(filter);
-    if (_.isEqual(data.kyNangCan, filter)) {
-      console.log(true);
-      console.log(data);
-      return data;
-    }
+  // danh sach TEN ky nang cua cong viec
+  var dskynang = _.map(data, "kyNangCan");
+  var tenkynang = _.map(dskynang, function(each){
+    return _.map(each, "ten");
   });
+  console.log(`congviec: ${JSON.stringify(tenkynang)}`);
+  // tenkynang = [ [ 'Cloud Security' ], [ 'Cloud Security', 'Real-time Monitoring' ] ]
+
+  // danh sach TEN ky nang cua ung vien
+  var filter_ten = _.map(filter, "ten");
+  console.log(`ungvien: ${JSON.stringify(filter_ten)}`);
+  
+  // filter
+  // B1. filter ten
+  // B2. filter trinh do
+  //var result = 
 };
