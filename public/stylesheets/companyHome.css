@@ -1,0 +1,28 @@
+.skillBox .skill {
+  max-width: 140px !important;
+  font-weight: 600;
+  color: antiquewhite;
+  background-color: forestgreen;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+  border-left-width: 5px;
+
+  padding-right: 5px;
+  padding-left: 5px;
+}
+.skillBox .level {
+  margin-left: 5px;
+  min-width: 120px !important;
+}
+.skillBox {
+  display: flex;
+  flex-direction: row;
+  border-style: solid;
+  border-color: forestgreen;
+  border-top-width: 3px;
+  border-bottom-width: 3px;
+  border-right-width: 3px;
+  border-radius: 15px;
+  margin-right: 10px;
+  margin-bottom: 7px;
+}

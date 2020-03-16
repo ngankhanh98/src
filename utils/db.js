@@ -15,5 +15,10 @@ module.exports = {
     db
       .get(tableName)
       .push(value)
-      .write()
+      .write(),
+  filter: (tableName, condition) =>
+    db
+      .get(tableName)
+      .filter(condition)
+      .value()
 };

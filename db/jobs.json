@@ -105,70 +105,8 @@
       ],
       "slots": 15,
       "benifits": "Free Healthcare",
-      "company": "Tosiba",
+      "company": "Toshiba",
       "id": "eZEHKdvi"
-    },
-    {
-      "name": "Tester",
-      "description": "nnjsnfjfd",
-      "location": "Ha Noi",
-      "type": "Outsourcing",
-      "salary": 10000,
-      "expiration": "23/03/2020",
-      "skills": [
-        {
-          "name": "C/C++",
-          "level": 1
-        },
-        {
-          "name": "Java",
-          "level": 3
-        }
-      ],
-      "slots": 10,
-      "benifits": "None",
-      "company": "Tosiba",
-      "id": "tM7o_nCi"
-    },
-    {
-      "name": "Tester",
-      "description": "mmm",
-      "location": "TP HCM",
-      "type": "Outsourcing",
-      "salary": 10000,
-      "expiration": "31/03/2020",
-      "skills": [
-        {
-          "name": "C/C++",
-          "level": 2
-        },
-        {
-          "name": "C#",
-          "level": 1
-        }
-      ],
-      "slots": 15,
-      "benifits": "Free Healthcare",
-      "company": "Tosiba",
-      "id": "6puH0fMJ"
-    },
-    {
-      "name": "Tester",
-      "description": "csdnjcnsdjc",
-      "location": "TP HCM",
-      "type": "Outsourcing",
-      "salary": 1000,
-      "expiration": "31/03/2020",
-      "skills": [
-        {
-          "name": "C/C++",
-          "level": 1
-        }
-      ],
-      "slots": 15,
-      "benifits": "Free Healthcare",
-      "company": "Tosiba",
-      "id": "z1nYsXu3"
     }
   ],
   "users": [
@@ -191,7 +129,7 @@
   "companies": [
     {
       "id": 1,
-      "name": "Tosiba",
+      "name": "Toshiba",
       "phone": "09873232",
       "id_manager": "1"
     },
