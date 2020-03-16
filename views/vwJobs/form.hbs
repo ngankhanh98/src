@@ -1,24 +1,24 @@
-<div class="container">
+<div class="container mainContainer" id="{{id}}">
     <div class="row">
         <div class="col-2">
         </div>
         <div class="col-8 border border-secondary">
             <form id="Form">
                 <div class="form-group mt-3">
-                    <input type="text" class="form-control" id="viTri" placeholder="Lập trình viên" name="name">
+                    <input type="text" class="form-control" id="Name" placeholder="Lập trình viên" name="name">
                 </div>
                 <div class="form-group row">
                     <div class="col">
-                        <label for="number">Chỉ tiêu</label>
-                        <input type="number" class="form-control" placeholder="0" id="number" name="number">
+                        <label for="Slots">Chỉ tiêu</label>
+                        <input type="number" class="form-control" placeholder="0" id="Slots" name="number">
                     </div>
                     <div class="col">
-                        <label for="salary">Lương</label>
-                        <input type="number" class="form-control" placeholder="0" id="number" name="salary">
+                        <label for="Salary">Lương</label>
+                        <input type="number" class="form-control" placeholder="0" id="Salary" name="salary">
                     </div>
                     <div class="col">
-                        <label for="datepicker">Ngày hết hạn</label>
-                        <input type="text" id="datepicker" class="form-control">
+                        <label for="DueDate">Ngày hết hạn</label>
+                        <input type="text" id="DueDate" class="form-control">
                     </div>
                 </div>
                 <div>
@@ -26,11 +26,36 @@
                         Thêm kỹ năng
                     </button>
                 </div>
-                <div class="form-group">
-                    <label for="exampleFormControlTextarea1">Nội dung</label>
-                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
-                        name="description"></textarea>
+                <div class="row col-12 skill-row-chosen">
+
                 </div>
+                <div class="form-group row col-5 mt-2">
+                    <label for="Location" class="col-sm-3 col-form-label">Vị Trí:</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control" id="Location">
+                    </div>
+                </div>
+                <div class="form-group row col-6">
+                    <label for="Type" class="col-5 col-form-label">Loại công việc:</label>
+                    <div class="col-7">
+                        <select class="custom-select custom-select level" id="Type">
+                            <option value="1" selected>Outsourcing</option>
+                            <option value="2">Product</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group row col-12">
+                    <label for="Benifits" class="col-sm-2 col-form-label">Lợi ích:</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="Benifits">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="Description">Nội dung</label>
+                    <textarea class="form-control" id="Description" rows="3" name="description"></textarea>
+                </div>
+                <button class="btn btn-success mb-3 float-right mr-3" type="button" id="Post">Đăng</button>
             </form>
         </div>
         <div class="col-2"></div>
@@ -38,7 +63,7 @@
 </div>
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
     aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
@@ -47,11 +72,34 @@
                 </button>
             </div>
             <div class="modal-body">
-                ...
+                <form>
+                    <div class="form-group row">
+                        <label for="kyNang" class="col-sm-2 col-form-label">Kỹ năng:</label>
+                        <div class="col-sm-5">
+                            <select class="js-example-basic-single skill" style="width: 100%;" id="kyNang">
+                            </select>
+                        </div>
+                        <label for="trinhDo" class="col-sm-2 col-form-label">Trình độ:</label>
+                        <div class="col-sm-3">
+                            <select class="custom-select custom-select-sm level" id="trinhDo">
+                                <option value="1" selected>Nghiệp dư</option>
+                                <option value="2">Có kinh nghiệm</option>
+                                <option value="3">Chuyên nghiệp</option>
+                            </select>
+                        </div>
+                        <div class="d-flex justify-content-center col">
+                            <button type="button btn-sm" class="btn btn-success" id="AddSkillBtn"
+                                type="button">Thêm</button>
+                        </div>
+                        <div class="row col-12 skill-row">
+
+                        </div>
+                    </div>
+                </form>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
+                <button type="button" class="btn btn-primary" id="GetSkill">Save changes</button>
             </div>
         </div>
     </div>
@@ -59,8 +107,79 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"></script>
 <script>
     $(function () {
-        $("#datepicker").datepicker();
-        $('#AddDue').datetimepicker();
+        var skillChosen = [];
+        var tempArray = [];
+        var data = [
+            {
+                id: 0,
+                text: 'C/C++'
+            },
+            {
+                id: 1,
+                text: 'C#'
+            },
+            {
+                id: 2,
+                text: 'Java'
+            },
+            {
+                id: 3,
+                text: 'Javascript'
+            },
+            {
+                id: 4,
+                text: 'Python'
+            },
+            {
+                id: 5,
+                text: 'MySQL'
+            },
+            {
+                id: 6,
+                text: 'Mycrosoft SQL'
+            },
+            {
+                id: 5,
+                text: 'Ruby'
+            },
+            {
+                id: 6,
+                text: 'PHP'
+            }
+        ];
+        var matchCustom = (params, data) => {
+            // If there are no search terms, return all of the data
+            if ($.trim(params.term) === '') {
+                return data;
+            }
+
+            // Do not display the item if there is no 'text' property
+            if (typeof data.text === 'undefined') {
+                return null;
+            }
+
+            // `params.term` should be the term that is used for searching
+            // `data.text` is the text that is displayed for the data object
+            if (data.text.toLowerCase().indexOf(params.term.toLowerCase()) > -1) {
+                var modifiedData = $.extend({}, data, true);
+
+                // You can return modified objects from here
+                // This includes matching the `children` how you want in nested data sets
+                return modifiedData;
+            }
+
+            // Return `null` if the term should not be displayed
+            return null;
+        }
+        $('.js-example-basic-single').select2({
+            data,
+            placeholder: "Chọn một kỹ năng",
+            allowClear: true,
+            matcher: matchCustom
+        });
+        $("#DueDate").datepicker({
+            dateFormat: "dd/mm/yy"
+        });
         $('#Form').validate({
             rules: {
                 name: {
@@ -105,5 +224,119 @@
                 $(e).removeClass('is-invalid').addClass('is-valid');
             }
         });
+        $("#AddSkillBtn").click(e => {
+            e.preventDefault();
+            let skill = $(".skill").children("option:selected").html();
+            let skillExist = tempArray.find((value) => {
+                return value.name === skill;
+            });
+            if (skillExist !== undefined && tempArray.length !== 0) {
+                return;
+            }
+            let level = parseInt($(".level").val());
+            let skillBox = $.parseHTML(`<div class="form-group row choose col-md-auto ml-3" id="skill_${tempArray.length}">
+                                <label for="trinhDo" class="col-md-auto col-form-label">${skill}</label>
+                                <div class="col">
+                                    <select class='custom-select custom-select-sm Templevel' id='trinhDo_${tempArray.length}'>
+                                        <option value='1'>Nghiệp dư</option>
+                                        <option value='2'>Có kinh nghiệm</option>
+                                        <option value='3'>Chuyên nghiệp</option>
+                                    </select>
+                                </div>
+                                <button class="col-1 DeleteTemp" type="button" id="${tempArray.length}">x</button>
+                            </div>`);
+            $(skillBox).find(`option[value=${level}]`).attr("selected", true);
+            $(".skill-row").append(skillBox);
+            tempArray.push({ name: skill, level: level });
+        });
+        $(document).on("click", "button.DeleteTemp", e => {
+            let id = parseInt(e.currentTarget.id);
+            tempArray.splice(id, 1);
+            $(`#skill_${id}`).remove();
+            console.log(tempArray);
+        });
+        $(document).on("click", "button.DeleteTrue", e => {
+            let id = parseInt(e.currentTarget.id);
+            skillChosen.splice(id, 1);
+            $(`#skill_${id}`).remove();
+            console.log(skillChosen);
+        });
+        $("#GetSkill").click(e => {
+            e.preventDefault();
+            let temp = $(".skill-row").children().clone();
+            temp.find(".DeleteTemp").removeClass("DeleteTemp").addClass("DeleteTrue");
+            temp.find(".Templevel").removeClass("Templevel").addClass("Truelevel");
+            $("div.skill-row-chosen").children().remove();
+            $("div.skill-row-chosen").append(temp);
+            skillChosen.splice(0, skillChosen.length, ...tempArray);
+            $("#exampleModal").modal("hide");
+        });
+        $('#exampleModal').on('show.bs.modal', function (e) {
+            $(".skill-row").children().remove();
+            for (let temp = 0; temp < skillChosen.length; temp++) {
+                let skillBox = $.parseHTML(`<div class="form-group row choose col-md-auto ml-3" id="skill_${temp}">
+                                <label for="trinhDo" class="col-md-auto col-form-label">${skillChosen[temp].name}</label>
+                                <div class="col">
+                                    <select class='custom-select custom-select-sm Templevel' id='trinhDo_${temp}'>
+                                        <option value='1'>Nghiệp dư</option>
+                                        <option value='2'>Có kinh nghiệm</option>
+                                        <option value='3'>Chuyên nghiệp</option>
+                                    </select>
+                                </div>
+                                <button class="col-1 DeleteTemp" type="button" id="${temp}">x</button>
+                            </div>`);
+                $(skillBox).find(`option[value=${skillChosen[temp].level}]`).attr("selected", true);
+                $(".skill-row").append(skillBox);
+            }
+            tempArray.splice(0, tempArray.length, ...skillChosen);
+        });
+        $(document).on("change", "select.Templevel", (e) => {
+            let id = e.currentTarget.id;
+            let index = parseInt(id.substring(id.indexOf('_') + 1, id.length));
+            let currentLevel = parseInt(e.currentTarget.value);
+            tempArray[index].level = currentLevel;
+            console.log(tempArray);
+        });
+        $(document).on("change", "select.Truelevel", (e) => {
+            let id = e.currentTarget.id;
+            let index = parseInt(id.substring(id.indexOf('_') + 1, id.length));
+            let currentLevel = parseInt(e.currentTarget.value);
+            skillChosen[index].level = currentLevel;
+            console.log(skillChosen);
+        });
+        $("#Post").click((e) => {
+            e.preventDefault();
+            let name = $("#Name").val();
+            let slots = parseInt($("#Slots").val());
+            let salary = parseFloat($("#Salary").val());
+            let skills = skillChosen;
+            let expiration = $("#DueDate").val();
+            let benifits = $("#Benifits").val();
+            let description = $("#Description").val();
+            let type = $("#Type").children("option:selected").html();
+            let location = $("#Location").val();
+            let idCompany = $("div.mainContainer").attr("id");
+
+            let data = {
+                name,
+                description,
+                location,
+                type,
+                salary,
+                expiration,
+                skills,
+                slots,
+                benifits
+            }
+            $.ajax({
+                method: "POST",
+                url: `/companies/${idCompany}/post`,
+                data: JSON.stringify(data),
+                contentType: "application/json; charset=utf-8",
+                dataType: "json"
+            }).done(function (msg) {
+                window.location.href = `/companies/${idCompany}/`;
+            });
+        })
     })
 </script>

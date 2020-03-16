@@ -1,0 +1,27 @@
+.choose {
+  border-style: solid;
+  border-color: forestgreen;
+  border-radius: 30px;
+  border-width: 2px;
+  padding: 3px;
+  margin-left: 10px;
+}
+.choose .DeleteTemp {
+  margin-left: 3px;
+  font-weight: bold;
+  border-style: solid;
+  border-color: red;
+  border-radius: 30px !important;
+  padding-bottom: 10px;
+  padding-left: 6px;
+}
+
+.choose .DeleteTrue {
+  margin-left: 3px;
+  font-weight: bold;
+  border-style: solid;
+  border-color: red;
+  border-radius: 30px !important;
+  padding-bottom: 10px;
+  padding-left: 6px;
+}

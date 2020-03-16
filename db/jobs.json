@@ -10,11 +10,26 @@
       "salary": 1000,
       "expiration": "2020-03-20 23:59:59 +07:00",
       "skills": [
-        { "name": "Java", "level": 3 },
-        { "name": "HTML", "level": 1 },
-        { "name": "CSS", "level": 1 },
-        { "name": "MySQL", "level": 2 },
-        { "name": "MongoDB", "level": 0 }
+        {
+          "name": "Java",
+          "level": 3
+        },
+        {
+          "name": "HTML",
+          "level": 1
+        },
+        {
+          "name": "CSS",
+          "level": 1
+        },
+        {
+          "name": "MySQL",
+          "level": 2
+        },
+        {
+          "name": "MongoDB",
+          "level": 0
+        }
       ],
       "slots": 70,
       "benifits": "Salary review every year"
@@ -29,10 +44,22 @@
       "salary": 700,
       "expiration": "2020-03-08 23:59:59 +07:00",
       "skills": [
-        { "name": "HTML", "level": 3 },
-        { "name": "WebGL", "level": 2 },
-        { "name": "JSON", "level": 2 },
-        { "name": "Restful API", "level": 3 }
+        {
+          "name": "HTML",
+          "level": 3
+        },
+        {
+          "name": "WebGL",
+          "level": 2
+        },
+        {
+          "name": "JSON",
+          "level": 2
+        },
+        {
+          "name": "Restful API",
+          "level": 3
+        }
       ],
       "slots": 12,
       "benifits": "The 13rd salary is available"
@@ -47,18 +74,119 @@
       "salary": 1500,
       "expiration": "2020-04-01 23:59:59 +07:00",
       "skills": [
-        { "name": "C++", "level": 3 },
-        { "name": "Qt framework", "level": 2 },
-        { "name": "MFC", "level": 0 }
+        {
+          "name": "C++",
+          "level": 3
+        },
+        {
+          "name": "Qt framework",
+          "level": 2
+        },
+        {
+          "name": "MFC",
+          "level": 0
+        }
       ],
       "slots": 12,
       "benifits": "Get bonus by every 6 months"
+    },
+    {
+      "name": "Tester",
+      "description": "jksnvksnkd",
+      "location": "TP HCM",
+      "type": "Outsourcing",
+      "salary": 1000,
+      "expiration": "31/03/2020",
+      "skills": [
+        {
+          "name": "C/C++",
+          "level": 1
+        }
+      ],
+      "slots": 15,
+      "benifits": "Free Healthcare",
+      "company": "Tosiba",
+      "id": "eZEHKdvi"
+    },
+    {
+      "name": "Tester",
+      "description": "nnjsnfjfd",
+      "location": "Ha Noi",
+      "type": "Outsourcing",
+      "salary": 10000,
+      "expiration": "23/03/2020",
+      "skills": [
+        {
+          "name": "C/C++",
+          "level": 1
+        },
+        {
+          "name": "Java",
+          "level": 3
+        }
+      ],
+      "slots": 10,
+      "benifits": "None",
+      "company": "Tosiba",
+      "id": "tM7o_nCi"
+    },
+    {
+      "name": "Tester",
+      "description": "mmm",
+      "location": "TP HCM",
+      "type": "Outsourcing",
+      "salary": 10000,
+      "expiration": "31/03/2020",
+      "skills": [
+        {
+          "name": "C/C++",
+          "level": 2
+        },
+        {
+          "name": "C#",
+          "level": 1
+        }
+      ],
+      "slots": 15,
+      "benifits": "Free Healthcare",
+      "company": "Tosiba",
+      "id": "6puH0fMJ"
+    },
+    {
+      "name": "Tester",
+      "description": "csdnjcnsdjc",
+      "location": "TP HCM",
+      "type": "Outsourcing",
+      "salary": 1000,
+      "expiration": "31/03/2020",
+      "skills": [
+        {
+          "name": "C/C++",
+          "level": 1
+        }
+      ],
+      "slots": 15,
+      "benifits": "Free Healthcare",
+      "company": "Tosiba",
+      "id": "z1nYsXu3"
     }
   ],
   "users": [
-    { "id": 1, "username": "Nguyễn Văn B", "type": 2 },
-    { "id": 2, "username": "Nguyễn Thị C", "type": 1 },
-    { "id": 3, "username": "Lê Hồng D", "type": 2 }
+    {
+      "id": 1,
+      "username": "Nguyễn Văn B",
+      "type": 2
+    },
+    {
+      "id": 2,
+      "username": "Nguyễn Thị C",
+      "type": 1
+    },
+    {
+      "id": 3,
+      "username": "Lê Hồng D",
+      "type": 2
+    }
   ],
   "companies": [
     {
