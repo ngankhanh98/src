@@ -1,7 +1,7 @@
-const search = require("../models/search");
+const searchModel = require("../models/search.model");
 
 exports.home = async (req, res) => {
-  kynang = await search.getKyNang();
+  kynang = await searchModel.getKyNang();
   res.render("search", {
     title: "Search",
     kynang
@@ -24,7 +24,7 @@ exports.result = async (req, res) => {
   // =============================================
 
   // Ứng với mỗi congviec tạo ra 1 mảng các kỹ năng cần thiết đối (cấu trúc giống với mảng skills)
-  let congviec = await search.getCongViec();
+  let congviec = await searchModel.getCongViec();
   for (let i = 0; i < congviec.length; i++) {
     let arrKyNangCan = [];
     congviec[i].kyNangCan.map(j => {
@@ -56,7 +56,7 @@ exports.result = async (req, res) => {
   }
   // ============================================
 
-  kynang = await search.getKyNang();
+  kynang = await searchModel.getKyNang();
   res.render("search", {
     title: "Search",
     search: result,
