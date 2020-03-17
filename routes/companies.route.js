@@ -31,7 +31,7 @@ router.get("/:id", async (req, res, next) => {
     }
   }
   res.render("vwCompanies/home", {
-    layout: "boostrapLayout",
+    layout: "bootstrapLayout",
     title: company.name,
     id,
     jobs: companyJobs,
@@ -45,7 +45,7 @@ router.get("/:id/post", async (req, res, next) => {
   let company = await companyModel.get(entity);
 
   res.render("vwJobs/form", {
-    layout: "boostrapLayout",
+    layout: "bootstrapLayout",
     title: `${company.name} post`,
     id,
     extra:
