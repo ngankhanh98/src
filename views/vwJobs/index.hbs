@@ -1,26 +1,36 @@
-{{#if empty}}
-<h1>There is no </p>
-{{else}}
-  {{#each jobs}}
-  <h1>{{id}} &hyphen; {{name}}</h1>
-  
-  <p><b>Description:</b> {{description}}</p>
-  <p><b>Company:</b> {{description}}</p>
-  <p><b>Location:</b> {{location}}</p>
-  <p><b>Type:</b> {{type}}</p>
-  <p><b>Salary:</b> {{salary}}</p>
-  <p><b>Expiration:</b> {{expiration}}</p>
-  
-  <ul>
-    {{#each this.skills }}
-    <li>{{name}} - {{level}}</li>
-    {{/each}}
-  </ul>
-  
-  <p><b>Slots:</b> {{slots}}</p>
-  <p><b>Benifits:</b> {{benifits}}</p>
-  
-  <hr />
-  
-  {{/each}}
-{{/if}}
+<div class="container">
+    <div class="row">
+        <div class="col-2">
+        </div>
+        <div class="col-8 row">
+            <div class="col-12 mt-3 mb-3">
+                {{#each jobs}}
+                <div class="card col-12 mb-3">
+                    <div>{{company}}</div>
+                    <div class="card-body row">
+                        <h5 class="card-title col-12">{{this.name}}</h5>
+                        <h6 class="card-subtitle mb-2 text-muted col-6">Chỉ tiêu: {{this.slots}}</h6>
+                        <h6 class="card-subtitle mb-2 text-muted col-6">Lương: {{this.salary}}</h6>
+                        <p class="card-text col-12">Ngày hết hạn: {{this.expiration}}</p>
+                        <p class="card-text col-6">Vị trí làm việc: {{this.location}}</p>
+                        <p class="card-text col-6">Loại công việc: {{this.type}}</p>
+                        {{#each this.skills}}
+                        <div class="skillBox">
+                            <div class="skill">
+                                {{this.name}}
+                            </div>
+                            <div class="level">
+                                {{this.level}}
+                            </div>
+                        </div>
+                        {{/each}}
+                        <a href="#" class="card-link col-12">Chi tiết</a>
+                    </div>
+
+                </div>
+                {{/each}}
+            </div>
+        </div>
+        <div class="col-2"></div>
+    </div>
+</div>
