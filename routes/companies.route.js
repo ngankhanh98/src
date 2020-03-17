@@ -9,25 +9,32 @@ router.get("/:id", async (req, res, next) => {
   const id = +req.params.id;
   const entity = { id };
   console.log(entity);
-  let company = await companyModel.get(entity);
-  let companyJobs = await jobModel.filter({ company: company.name });
-  for (let index = 0; index < companyJobs.length; index++) {
-    for (let index2 = 0; index2 < companyJobs[index].skills.length; index2++) {
-      let temp = companyJobs[index].skills[index2].level;
-      let text = "None";
-      switch (temp) {
-        case 1:
-          text = "Nghiệp dư";
-          break;
-        case 2:
-          text = "Có kinh ngiệm";
-          break;
-        case 3:
-          text = "Chuyên nghiệp";
-        default:
-          break;
+  var company = await companyModel.get(entity);
+  var companyJobs = await jobModel.filter({ company: company.name });
+  if (!isNaN(companyJobs[0].skills[0].level)) {
+    for (let index = 0; index < companyJobs.length; index++) {
+      for (
+        let index2 = 0;
+        index2 < companyJobs[index].skills.length;
+        index2++
+      ) {
+        let temp = companyJobs[index].skills[index2].level;
+        console.log(temp);
+        let text = "None";
+        switch (temp) {
+          case 1:
+            text = "Nghiệp dư";
+            break;
+          case 2:
+            text = "Có kinh ngiệm";
+            break;
+          case 3:
+            text = "Chuyên nghiệp";
+          default:
+            break;
+        }
+        companyJobs[index].skills[index2].level = text;
       }
-      companyJobs[index].skills[index2].level = text;
     }
   }
   res.render("vwCompanies/index", {
