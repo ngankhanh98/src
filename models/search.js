@@ -1,5 +1,5 @@
 const { db } = require("../config/dbs");
-var _ = require("underscore");
+var _ = require("lodash");
 
 module.exports.getKyNang = async () => {
   const data = await db.get("kynang").value();

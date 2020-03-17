@@ -1,0 +1,43 @@
+.choose {
+  border-style: solid;
+  border-color: forestgreen;
+  border-radius: 30px;
+  border-width: 4px;
+  padding: 3px;
+  margin-left: 10px;
+}
+.choose .DeleteTemp {
+  margin-left: 3px;
+  font-weight: bold;
+  padding-bottom: 10px;
+  padding-left: 6px;
+  color: grey;
+  background-color: white;
+  border: none;
+  border-radius: 15px;
+  transition: 0.3s;
+  font-size: 15pt;
+}
+
+.choose .DeleteTemp:hover {
+  transition: 0.3s;
+  color: red;
+}
+
+.choose .DeleteTrue {
+  border-radius: 15px;
+  margin-left: 3px;
+  font-weight: bold;
+  color: grey;
+  background-color: white;
+  border: none;
+  padding-bottom: 10px;
+  padding-left: 6px;
+  transition: 0.3s;
+  font-size: 15pt;
+}
+
+.choose .DeleteTrue:hover {
+  transition: 0.3s;
+  color: red;
+}
