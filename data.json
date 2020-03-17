@@ -1,6 +1,5 @@
 {
-  "kynang": [
-    {
+  "kynang": [{
       "id": 1,
       "ten": "Cloud Security"
     },
@@ -73,24 +72,33 @@
       "ten": "Selenium"
     }
   ],
-  "congviec": [
-    {
+  "congviec": [{
       "id": 1,
-      "kyNangCan": [{ "ten": "Cloud Security", "trinhdo": 1 }],
+      "kyNangCan": [{
+        "ten": "Cloud Security",
+        "trinhdo": "Nghiệp dư"
+      }],
       "congTy": "VNG",
       "ngayDang": "2020-03-15",
       "ngayHetHan": "2020-05-15",
       "luong": 6,
-      "noiDung": "VNG Group ra đời với mục tiêu tạo hệ sinh thái online, giúp người dùng có thể trải nghiệm mọi tiện ích từ tiêu dùng, tài chính, kinh doanh, giáo dục, việc làm, nhà đất,..."
+      "noiDung": "VNP Group ra đời với mục tiêu tạo hệ sinh thái online, giúp người dùng có thể trải nghiệm mọi tiện ích từ tiêu dùng, tài chính, kinh doanh, giáo dục, việc làm, nhà đất,... Trải qua hơn 10 năm phát triển, VNP Group hiện đã và đang tạo ra nhiều giá trị cho cộng đồng. Với sứ mệnh “giúp con người hạnh phúc hơn với Internet, đem lại sự giàu có và tự hào cho các thành viên”.\nVNP hiện đang triển khai các Dự án ứng dụng công nghệ trong lĩnh vực giáo dục và Digital Content.\nĐội ngũ Developer khủng chủ chốt của công ty cho thấy sự chuyên nghiệp của mình với sự thành công của Dự án Digital Content. Tính đến thời điểm tháng 5/2014 - chỉ sau 1 năm ra mắt; dự án đã vượt mốc 100.000 lượt truy cập mỗi ngày, sở hữu 2.000.000 thành viên đăng ký, lọt vào top 100 các website phổ biến nhất tại Việt Nam, tỷ lệ tìm kiếm thuộc top 3 Google.Hiện team cần chiêu mộ nhân sự nguồn, những TTS tài năng để cùng thực hiện những Dự án giáo dục nhiều tiềm năng trong tương lai. \n Địa chỉ: 102 Thái Thịnh\n\nWHAT YOU DO:\n- Tham gia thiết kế và xây dựng các dự án, ý tưởng khởi nghiệp về giáo dục.\n- Nghiên cứu và áp dụng công nghệ, kỹ thuật mới cho dự án: Realtime, Search Engine, Streaming, Media Process, Big Data, AI...\n\nWHO YOU ARE:\n- Đang là sinh viên chuyên ngành CNTT, Toán tin tại các trường như : ĐH Bách Khoa, ĐH Công nghệ, ĐH KHTN, ĐH Công nghiệp, Đại học Bưu chính Viễn thông, FPT, ...\n- Có hiểu biết về HTML, CSS, PHP, hướng đối tượng (OOP), đã tìm hiểu về 1 trong các framework Laravel, Codeigniter/CI, CakePHP,...\n- Ưu tiên các bạn đã làm Project (kèm theo link Github)\n- Chăm chỉ, chịu khó, có tinh thần chủ động học hỏi, không ngại khó ngại khổ.\n- Tư duy logic, sẵn sàng học thêm một ngôn ngữ (lập trình) mới.\n- Đam mê lập trình, chăm chỉ, hòa đồng. Sẵn sàng tìm hiểu và học hỏi cái mới, trách nhiệm với công việc.\n\nBENEFITS:\nVề lương thưởng:\nMức lương:\nLương Part-time upto 3.000.000 đồng/tháng theo năng lực\nLương Full-time upto 13.000.000 đồng/tháng theo năng lực\nXét năng lực tăng lương sau 3 - 6 tháng.\nTrợ cấp ăn trưa, trợ cấp đi lại, máy tính.\nLương tháng 13, các khoản thưởng lễ Tết.\nVề cơ hội phát triển:\nCó cơ hội học tập và làm việc trong môi trường thực tế, chuyên nghiệp, năng động, trưởng dự án dày dặn kinh nghiệm, tâm lý, nghiệp vụ tốt để học hỏi trở thành Fullstack developer.\nĐược đào tạo kiến thức chuyên môn và đầy đủ kỹ năng để làm việc sau mỗi khóa đào tạo.\nCó cơ hội trở thành nhân viên chính thức với quyền lợi đãi ngộ tương xứng với năng lực và kết quả hoàn thành công việc.\nĐược tham gia xây dựng các ứng dụng, website cho dự án startup.\nMọi góp ý về giải pháp, công nghệ đều được xem xét và áp dụng nếu khả thi.\nVề môi trường làm việc:\nNhân sự hỗ trợ 24/7, sẵn sàng giúp đỡ và tạo điều kiện công tác tốt nhất.\nĐội ngũ nhân sự trẻ với 52% nhân viên và 34% quản lý dưới 25 tuổi.\nVăn phòng xanh, không gian thoáng đãng.\nCác hoạt động bonding, liên hoan hàng tháng, năm.\n\nAPPLY:\nỨng tuyển trực tiếp tại: trangnk@vatgia.com với tiêu đề [TTS PHP] - Họ tên\nHotline/Skype/Zalo: 0912 083 918 (Ms.Trang)\nĐịa chỉ: 102 Thái Thịnh, Đống Đa, Hà Nội"
     },
     {
       "id": 2,
-      "kyNangCan": [{ "ten": "Cloud Security", "trinhdo": 2 }, { "ten": "Real-time Monitoring", "trinhdo": 1 }],
+      "kyNangCan": [{
+        "ten": "Cloud Security",
+        "trinhdo": "Nghiệp dư"
+      }, {
+        "ten": "Infrastructure as code (IaC)",
+        "trinhdo": "Có kinh nghiệm"
+      }],
       "congTy": "VNG",
       "ngayDang": "2020-03-15",
       "ngayHetHan": "2020-05-15",
-      "luong": 6,
-      "noiDung": "VNG Group ra đời với mục tiêu tạo hệ sinh thái online, giúp người dùng có thể trải nghiệm mọi tiện ích từ tiêu dùng, tài chính, kinh doanh, giáo dục, việc làm, nhà đất,..."
+      "luong": 20,
+      "noiDung": "VNP Group ra đời với mục tiêu tạo hệ sinh thái online, giúp người dùng có thể trải nghiệm mọi tiện ích từ tiêu dùng, tài chính, kinh doanh, giáo dục, việc làm, nhà đất,... Trải qua hơn 10 năm phát triển, VNP Group hiện đã và đang tạo ra nhiều giá trị cho cộng đồng. Với sứ mệnh “giúp con người hạnh phúc hơn với Internet, đem lại sự giàu có và tự hào cho các thành viên”.\nVNP hiện đang triển khai các Dự án ứng dụng công nghệ trong lĩnh vực giáo dục và Digital Content.\nĐội ngũ Developer khủng chủ chốt của công ty cho thấy sự chuyên nghiệp của mình với sự thành công của Dự án Digital Content. Tính đến thời điểm tháng 5/2014 - chỉ sau 1 năm ra mắt; dự án đã vượt mốc 100.000 lượt truy cập mỗi ngày, sở hữu 2.000.000 thành viên đăng ký, lọt vào top 100 các website phổ biến nhất tại Việt Nam, tỷ lệ tìm kiếm thuộc top 3 Google.Hiện team cần chiêu mộ nhân sự nguồn, những TTS tài năng để cùng thực hiện những Dự án giáo dục nhiều tiềm năng trong tương lai. \n Địa chỉ: 102 Thái Thịnh\n\nWHAT YOU DO:\n- Tham gia thiết kế và xây dựng các dự án, ý tưởng khởi nghiệp về giáo dục.\n- Nghiên cứu và áp dụng công nghệ, kỹ thuật mới cho dự án: Realtime, Search Engine, Streaming, Media Process, Big Data, AI...\n\nWHO YOU ARE:\n- Đang là sinh viên chuyên ngành CNTT, Toán tin tại các trường như : ĐH Bách Khoa, ĐH Công nghệ, ĐH KHTN, ĐH Công nghiệp, Đại học Bưu chính Viễn thông, FPT, ...\n- Có hiểu biết về HTML, CSS, PHP, hướng đối tượng (OOP), đã tìm hiểu về 1 trong các framework Laravel, Codeigniter/CI, CakePHP,...\n- Ưu tiên các bạn đã làm Project (kèm theo link Github)\n- Chăm chỉ, chịu khó, có tinh thần chủ động học hỏi, không ngại khó ngại khổ.\n- Tư duy logic, sẵn sàng học thêm một ngôn ngữ (lập trình) mới.\n- Đam mê lập trình, chăm chỉ, hòa đồng. Sẵn sàng tìm hiểu và học hỏi cái mới, trách nhiệm với công việc.\n\nBENEFITS:\nVề lương thưởng:\nMức lương:\nLương Part-time upto 3.000.000 đồng/tháng theo năng lực\nLương Full-time upto 13.000.000 đồng/tháng theo năng lực\nXét năng lực tăng lương sau 3 - 6 tháng.\nTrợ cấp ăn trưa, trợ cấp đi lại, máy tính.\nLương tháng 13, các khoản thưởng lễ Tết.\nVề cơ hội phát triển:\nCó cơ hội học tập và làm việc trong môi trường thực tế, chuyên nghiệp, năng động, trưởng dự án dày dặn kinh nghiệm, tâm lý, nghiệp vụ tốt để học hỏi trở thành Fullstack developer.\nĐược đào tạo kiến thức chuyên môn và đầy đủ kỹ năng để làm việc sau mỗi khóa đào tạo.\nCó cơ hội trở thành nhân viên chính thức với quyền lợi đãi ngộ tương xứng với năng lực và kết quả hoàn thành công việc.\nĐược tham gia xây dựng các ứng dụng, website cho dự án startup.\nMọi góp ý về giải pháp, công nghệ đều được xem xét và áp dụng nếu khả thi.\nVề môi trường làm việc:\nNhân sự hỗ trợ 24/7, sẵn sàng giúp đỡ và tạo điều kiện công tác tốt nhất.\nĐội ngũ nhân sự trẻ với 52% nhân viên và 34% quản lý dưới 25 tuổi.\nVăn phòng xanh, không gian thoáng đãng.\nCác hoạt động bonding, liên hoan hàng tháng, năm.\n\nAPPLY:\nỨng tuyển trực tiếp tại: trangnk@vatgia.com với tiêu đề [TTS PHP] - Họ tên\nHotline/Skype/Zalo: 0912 083 918 (Ms.Trang)\nĐịa chỉ: 102 Thái Thịnh, Đống Đa, Hà Nội"
+
     }
   ]
 }
