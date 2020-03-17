@@ -1,0 +1,143 @@
+{
+  "jobs": [
+    {
+      "id": 1,
+      "name": "Java Software Engineer - JD85",
+      "description": "Tham gia chương trình Đào tạo nhân viên mới: Đào tạo chuyên sâu, tổng thời gian đào tạo là 2 tháng để chuẩn bị các kiến thức và hoàn thiện kỹ năng trước khi tham gia vào dự án, với các nội dung bao gồm: kiến thức về Database, Lập trình hướng đối tượng, quy trình phát triển phần mềm, quản lý rủi ro…",
+      "company": "Toshiba",
+      "location": "Ho Chi Minh",
+      "type": "Product",
+      "salary": 1000,
+      "expiration": "2020-03-20 23:59:59 +07:00",
+      "skills": [
+        {
+          "name": "Java",
+          "level": 3
+        },
+        {
+          "name": "HTML",
+          "level": 1
+        },
+        {
+          "name": "CSS",
+          "level": 1
+        },
+        {
+          "name": "MySQL",
+          "level": 2
+        },
+        {
+          "name": "MongoDB",
+          "level": 0
+        }
+      ],
+      "slots": 70,
+      "benifits": "Salary review every year"
+    },
+    {
+      "id": 2,
+      "name": "Web Game Developer ",
+      "description": "Phát triển game/app trên nền tảng HTML5/Javascript.",
+      "company": "DIGITOP",
+      "location": "Hai Phong",
+      "type": "Outsourcing",
+      "salary": 700,
+      "expiration": "2020-03-08 23:59:59 +07:00",
+      "skills": [
+        {
+          "name": "HTML",
+          "level": 3
+        },
+        {
+          "name": "WebGL",
+          "level": 2
+        },
+        {
+          "name": "JSON",
+          "level": 2
+        },
+        {
+          "name": "Restful API",
+          "level": 3
+        }
+      ],
+      "slots": 12,
+      "benifits": "The 13rd salary is available"
+    },
+    {
+      "id": 3,
+      "name": "C/C++ Software Engineer - JD86",
+      "description": "Tham gia phát triển phần mềm cho các hệ thống và giải pháp công nghiệp của tập đoàn Toshiba trong các lĩnh vực: Năng lượng, Hệ thống & Giải pháp Cơ sở Hạ tầng, Thiết bị Điện tử và Lưu trữ, Giải pháp IoT trong Công nghiệp.",
+      "company": "Toshiba",
+      "location": "Ha Noi",
+      "type": "Product",
+      "salary": 1500,
+      "expiration": "2020-04-01 23:59:59 +07:00",
+      "skills": [
+        {
+          "name": "C++",
+          "level": 3
+        },
+        {
+          "name": "Qt framework",
+          "level": 2
+        },
+        {
+          "name": "MFC",
+          "level": 0
+        }
+      ],
+      "slots": 12,
+      "benifits": "Get bonus by every 6 months"
+    },
+    {
+      "name": "Tester",
+      "description": "jksnvksnkd",
+      "location": "TP HCM",
+      "type": "Outsourcing",
+      "salary": 1000,
+      "expiration": "31/03/2020",
+      "skills": [
+        {
+          "name": "C/C++",
+          "level": 1
+        }
+      ],
+      "slots": 15,
+      "benifits": "Free Healthcare",
+      "company": "Toshiba",
+      "id": "eZEHKdvi"
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "username": "Nguyễn Văn B",
+      "type": 2
+    },
+    {
+      "id": 2,
+      "username": "Nguyễn Thị C",
+      "type": 1
+    },
+    {
+      "id": 3,
+      "username": "Lê Hồng D",
+      "type": 2
+    }
+  ],
+  "companies": [
+    {
+      "id": 1,
+      "name": "Toshiba",
+      "phone": "09873232",
+      "id_manager": "1"
+    },
+    {
+      "id": 2,
+      "name": "DIGITOP",
+      "phone": "09873232",
+      "id_manager": "3"
+    }
+  ]
+}

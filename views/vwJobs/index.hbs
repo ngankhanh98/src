@@ -1,0 +1,26 @@
+{{#if empty}}
+<h1>There is no </p>
+{{else}}
+  {{#each jobs}}
+  <h1>{{id}} &hyphen; {{name}}</h1>
+  
+  <p><b>Description:</b> {{description}}</p>
+  <p><b>Company:</b> {{description}}</p>
+  <p><b>Location:</b> {{location}}</p>
+  <p><b>Type:</b> {{type}}</p>
+  <p><b>Salary:</b> {{salary}}</p>
+  <p><b>Expiration:</b> {{expiration}}</p>
+  
+  <ul>
+    {{#each this.skills }}
+    <li>{{name}} - {{level}}</li>
+    {{/each}}
+  </ul>
+  
+  <p><b>Slots:</b> {{slots}}</p>
+  <p><b>Benifits:</b> {{benifits}}</p>
+  
+  <hr />
+  
+  {{/each}}
+{{/if}}
