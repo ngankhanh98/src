@@ -1,21 +1,34 @@
-{{#if empty}}
-  <h1>Job not found!</p>
-{{else}}
-  <h1>{{job.id}} &hyphen; {{job.name}}</h1>
-
-  <p><b>Description:</b> {{job.description}}</p>
-  <p><b>Company:</b> {{job.description}}</p>
-  <p><b>Location:</b> {{job.location}}</p>
-  <p><b>Type:</b> {{job.type}}</p>
-  <p><b>Salary:</b> {{job.salary}}</p>
-  <p><b>Expiration:</b> {{job.expiration}}</p>
-
-  <ul>
-    {{#each job.skills }}
-    <li>{{name}} - {{level}}</li>
-    {{/each}}
-  </ul>
-
-  <p><b>Slots:</b> {{job.slots}}</p>
-  <p><b>Benifits:</b> {{job.benifits}}</p>
-{{/if}}
+<div class="container">
+  <div class="row">
+    <div class="col-12 row">
+      <div class="col-12 mt-3 mb-3">
+        {{#if empty}}
+        <h1 class="text-center">Không tìm thấy công việc!</p>
+        {{else}}
+        <div class="card col-12 mb-3">
+          <div class="card-body row">
+            <h5 class="card-title col-12">{{job.name}}</h5>
+            <h6 class="card-subtitle mb-2 text-muted col-6">Chỉ tiêu: {{job.slots}}</h6>
+            <h6 class="card-subtitle mb-2 text-muted col-6">Lương: {{job.salary}}</h6>
+            <p class="card-text col-12">Ngày hết hạn: {{job.expiration}}</p>
+            <p class="card-text col-6">Vị trí làm việc: {{job.location}}</p>
+            <p class="card-text col-6">Loại công việc: {{job.type}}</p>
+            {{#each job.skills}}
+            <div class="skillBox">
+              <div class="skill">
+                {{job.name}}
+              </div>
+              <div class="level">
+                {{job.level}}
+              </div>
+            </div>
+            {{/each}}
+            <p class="card-text">Mô tả công việc: {{job.description}}</p>
+            <p class="card-text">Quyền lợi: {{job.benifits}}</p>
+          </div>
+        </div>
+        {{/if}}
+      </div>
+    </div>
+  </div>
+</div>
