@@ -30,12 +30,12 @@ router.get("/:id", async (req, res, next) => {
       companyJobs[index].skills[index2].level = text;
     }
   }
-  res.render("vwCompanies/home", {
+  res.render("vwCompanies/index", {
     layout: "bootstrapLayout",
     title: company.name,
     id,
     jobs: companyJobs,
-    extra: '<link href="/stylesheets/companyHome.css" rel="stylesheet" />'
+    extra: '<link href="/stylesheets/companyIndex.css" rel="stylesheet" />'
   });
 });
 
