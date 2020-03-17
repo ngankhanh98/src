@@ -30,10 +30,9 @@ router.get("/", async (req, res, next) => {
   }
 
   res.render("vwJobs/index", {
-    layout: "bootstrapLayout",
     title: 'Danh sách các tin tuyển dụng',
     jobs,
-    extra: '<link href="/stylesheets/jobIndex.css" rel="stylesheet" />'
+    extra: '<link href="/stylesheets/jobIndex.css" rel="stylesheet">'
   });
 });
 

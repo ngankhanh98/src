@@ -8,62 +8,63 @@
   }
 </style>
 
-<div class="container">
+<div class="container mt-4">
   <div class="card">
-    <div class="card-header">
+    <div class="card-header text-white bg-primary">
       Tìm kiếm nâng cao
     </div>
     <div class="card-body">
       <form method="POST" action="search">
-        <ul class="list-group list-group-flush">
-          <li class="list-group-item">
-            <div class="form-group">
-              <div class="input-group d-flex justify-content-center">
-                <select id="inputGroupSelect" class="selectpicker" data-live-search="true">
-                  <option>Tên kỹ năng</option>
-                  {{#each kynang}}
-                  <option data-tokens="{{this.ten}}" value="{{this.id}}">{{this.ten}}</option>
-                  {{/each}}
-                </select>
-                <div class="input-group-append">
-                  <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown"
-                    aria-haspopup="true" aria-expanded="false">Trình độ</button>
-                  <div class="dropdown-menu">
-                    <button type="button" class="dropdown-item" onclick=addSkill(0)>Nghiệp dư</a>
-                      <button type="button" class="dropdown-item" onclick=addSkill(1)>Có kinh nghiệm</a>
-                        <button type="button" class="dropdown-item" onclick=addSkill(2)>Chuyên nghiệp</a>
-                  </div>
-                </div>
+        <div class="form-group">
+          <div class="input-group d-flex justify-content-center">
+            <select id="inputGroupSelect" class="selectpicker mr-2 border border-primary rounded-sm"
+              data-live-search="true">
+              <option>Tên kỹ năng</option>
+              {{#each kynang}}
+              <option data-tokens="{{this.ten}}" value="{{this.id}}">{{this.ten}}</option>
+              {{/each}}
+            </select>
+            <div class="input-group-append border border-primary">
+              <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">Trình độ</button>
+              <div class="dropdown-menu">
+                <button type="button" class="dropdown-item" onclick=addSkill(0)>Nghiệp dư</a>
+                  <button type="button" class="dropdown-item" onclick=addSkill(1)>Có kinh nghiệm</a>
+                    <button type="button" class="dropdown-item" onclick=addSkill(2)>Chuyên nghiệp</a>
               </div>
             </div>
-            <textarea type="button" class="form-control" id="selectedSkills" name="KyNang"></textarea>
-            {{!-- <div class="form-group" id="selectedSkills" name="KyNang"></div> --}}
+          </div>
+        </div>
+        <textarea type="button" class="form-control" id="selectedSkills" name="KyNang"></textarea>
+        {{!-- <div class="form-group" id="selectedSkills" name="KyNang"></div> --}}
+        <div class="d-flex justify-content-center mt-3">
+          <button type="submit" class="btn btn-primary">Tìm kiếm tin tuyển dụng</button>
+        </div>
+      </form>
     </div>
-
-    </li>
-    <li class="list-group-item d-flex justify-content-center">
-      <button type="submit" class="btn btn-primary">Tìm kiếm tin tuyển dụng</button>
-    </li>
-    </ul>
-    </form>
   </div>
-  <table style="width:100%">
-    <tr>
-      <th>Công ty</th>
-      <th>Ngày đăng</th>
-      <th>Ngày hết hạn</th>
-      <th>Lương</th>
-    </tr>
-    {{#if search}}
+
+  <table class="table table-striped mt-4" style="width: 100%;">
+    <thead>
+      <tr>
+        <th scope="col">Công ty</th>
+        <th scope="col">Ngày đăng</th>
+        <th scope="col">Ngày hết hạn</th>
+        <th scope="col">Lương</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#if search}}
       {{#each search}}
-        <tr>
-          <td>{{this.congTy}}</td>
-          <td>{{this.ngayDang}}</td>
-          <td>{{this.ngayHetHan}}</td>
-          <td>{{this.luong}}</td>
-        </tr>
+      <tr>
+        <td>{{this.congTy}}</td>
+        <td>{{this.ngayDang}}</td>
+        <td>{{this.ngayHetHan}}</td>
+        <td>{{this.luong}}</td>
+      </tr>
       {{/each}}
-    {{/if}}
+      {{/if}}
+    </tbody>
   </table>
 </div>
 </div>

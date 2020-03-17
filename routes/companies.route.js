@@ -38,11 +38,10 @@ router.get("/:id", async (req, res, next) => {
     }
   }
   res.render("vwCompanies/index", {
-    layout: "bootstrapLayout",
     title: `Việc làm từ ${company.name}`,
     id,
     jobs: companyJobs,
-    extra: '<link href="/stylesheets/companyIndex.css" rel="stylesheet" />'
+    extra: '<link href="/stylesheets/companyIndex.css" rel="stylesheet">'
   });
 });
 
@@ -52,7 +51,6 @@ router.get("/:id/post", async (req, res, next) => {
   let company = await companyModel.get(entity);
 
   res.render("vwJobs/form", {
-    layout: "bootstrapLayout",
     title: `Đăng tin tuyển dụng mới cho ${company.name}`,
     id,
     extra:
