@@ -31,7 +31,8 @@ router.get("/", async (req, res, next) => {
 
   res.render("vwJobs/index", {
     layout: "bootstrapLayout",
-    jobs: jobs,
+    title: 'Danh sách các tin tuyển dụng',
+    jobs,
     extra: '<link href="/stylesheets/jobIndex.css" rel="stylesheet" />'
   });
 });
@@ -43,6 +44,7 @@ router.get("/:id", async (req, res, next) => {
 
   res.render("vwJobs/detail", {
     job: row,
+    title: row.name,
     empty: row === undefined
   });
 });

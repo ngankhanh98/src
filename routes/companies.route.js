@@ -39,7 +39,7 @@ router.get("/:id", async (req, res, next) => {
   }
   res.render("vwCompanies/index", {
     layout: "bootstrapLayout",
-    title: company.name,
+    title: `Việc làm từ ${company.name}`,
     id,
     jobs: companyJobs,
     extra: '<link href="/stylesheets/companyIndex.css" rel="stylesheet" />'
@@ -53,7 +53,7 @@ router.get("/:id/post", async (req, res, next) => {
 
   res.render("vwJobs/form", {
     layout: "bootstrapLayout",
-    title: `${company.name} post`,
+    title: `Đăng tin tuyển dụng mới cho ${company.name}`,
     id,
     extra:
       '<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">' +

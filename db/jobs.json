@@ -2,13 +2,13 @@
   "jobs": [
     {
       "id": 1,
-      "name": "Java Software Engineer",
-      "description": "Tham gia chương trình Đào tạo nhân viên mới: Đào tạo chuyên sâu, tổng thời gian đào tạo là 2 tháng để chuẩn bị các kiến thức và hoàn thiện kỹ năng trước khi tham gia vào dự án, với các nội dung bao gồm: kiến thức về Database, Lập trình hướng đối tượng, quy trình phát triển phần mềm, quản lý rủi ro…",
+      "name": "Senior Java Developer",
+      "description": "Tham gia chương trình Đào tạo nhân viên mới: Đào tạo chuyên sâu, tổng thời gian đào tạo là 2 tháng để chuẩn bị các kiến thức và hoàn thiện kỹ năng trước khi tham gia vào dự án, với các nội dung bao gồm: kiến thức về Database, Lập trình hướng đối tượng, quy trình phát triển phần mềm, quản lý rủi ro...",
       "company": "Toshiba",
       "location": "TP. HCM",
       "type": "Product",
       "salary": 1000,
-      "expiration": "20/03/2020",
+      "expiration": "2020-03-20",
       "skills": [
         {
           "name": "Java",
@@ -32,7 +32,7 @@
         }
       ],
       "slots": 70,
-      "benifits": "Salary review every year"
+      "benifits": "Review lương theo định kỳ"
     },
     {
       "id": 2,
@@ -42,7 +42,7 @@
       "location": "Hải Phòng",
       "type": "Outsourcing",
       "salary": 700,
-      "expiration": "30/03/2020",
+      "expiration": "2020-03-30",
       "skills": [
         {
           "name": "HTML",
@@ -62,7 +62,7 @@
         }
       ],
       "slots": 12,
-      "benifits": "The 13rd salary is available"
+      "benifits": "Có lương thưởng tháng thứ 13"
     },
     {
       "id": 3,
@@ -72,7 +72,7 @@
       "location": "Hà Nội",
       "type": "Product",
       "salary": 1500,
-      "expiration": "01/04/2020",
+      "expiration": "2020-04-01",
       "skills": [
         {
           "name": "C++",
@@ -88,22 +88,25 @@
         }
       ],
       "slots": 12,
-      "benifits": "Get bonus by every 6 months"
+      "benifits": "Đề xuất tăng lương mỗi 6 tháng"
     },
     {
-      "name": "Tester",
-      "description": "jksnvksnkd",
-      "location": "TP. HCM",
+      "id": 5,
+      "name": "Senior Java Developer",
+      "location": "Da Nang",
       "type": "Outsourcing",
       "salary": 1000,
       "expiration": "31/03/2020",
       "skills": [
         {
-          "name": "C/C++",
+          "name": "Java",
+          "level": 2
+        },
+        {
+          "name": "Hibernate",
           "level": 1
         }
       ],
-      "id": 4,
       "slots": 15,
       "benifits": "Free Healthcare",
       "company": "Toshiba"
