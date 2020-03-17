@@ -3,7 +3,7 @@ const searchModel = require("../models/search.model");
 exports.home = async (req, res) => {
   kynang = await searchModel.getKyNang();
   res.render("search", {
-    title: "Search",
+    title: "Tìm kiếm nâng cao",
     kynang
   });
 };
@@ -58,7 +58,7 @@ exports.result = async (req, res) => {
 
   kynang = await searchModel.getKyNang();
   res.render("search", {
-    title: "Search",
+    title: "Tìm kiếm nâng cao",
     search: result,
     kynang
   });
